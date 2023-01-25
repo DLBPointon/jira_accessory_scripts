@@ -36,7 +36,7 @@ def authorise(url, user, password):
     return JIRA(url, basic_auth=(user, password))
 
 def get_decon_list(auth):           
-    return auth.search_issues(f'project IN ("Assembly curation", "Rapid Curation") AND labels = BlobToolKit AND status IN (curation,"Curation QC", Submitted, "In Submission")',
+    return auth.search_issues(f'project IN ("ToL Assembly curation", "ToL Rapid Curation") AND labels = BlobToolKit AND status IN (curation,"Curation QC", Submitted, "In Submission")',
                             maxResults=10000)
 
 def get_priorities(auth, list_of_tickets):
